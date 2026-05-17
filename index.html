@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QA Tester Notes — Arun Shanmugam</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        <span class="nav-icon">🧪</span>
+        <span class="nav-title">QA Notes</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#tutorials" class="nav-link">📚 Tutorials</a>
+        <a href="#about"     class="nav-link">👋 About</a>
+        <a href="#skills"    class="nav-link">🛠 Skills</a>
+        <a href="#contact"   class="nav-link">✉️ Contact</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge">🧪 QA TESTER NOTES</div>
+      <h1 class="hero-title">Welcome to QA Notes</h1>
+      <p class="hero-subtitle">
+        This is my small corner of the internet where <strong>Arun</strong> puts together notes and tutorials —
+        written in plain language, for anyone curious about QA.
+      </p>
+      <div class="hero-actions">
+        <a href="#tutorials" class="btn btn-primary">Start Learning</a>
+        <a href="#about"     class="btn btn-secondary">About Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHAT IS ON THIS SITE ── -->
+  <section class="what-is-here">
+    <div class="container">
+      <div class="section-label">📖 WHAT IS ON THIS SITE</div>
+      <p class="section-desc">
+        Tutorials on manual testing, Playwright automation, TypeScript, AI tools, and more.
+        Start from the beginning or jump to whatever interests you.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── TUTORIALS ── -->
+  <section class="tutorials" id="tutorials">
+    <div class="container">
+      <div class="section-label">📚 THE ART OF TESTING</div>
+      <p class="section-desc">
+        Start with Manual Testing — the foundation of all QA. Then move to automation, AI tools, and more.
+        Each topic is explained simply first, then technically.
+      </p>
+
+      <!-- Category Tabs -->
+      <div class="category-tabs" id="categoryTabs">
+        <button class="cat-tab active" data-target="manual">
+          <span>📋</span> Manual Testing <span class="cat-count">9</span>
+        </button>
+        <button class="cat-tab" data-target="api">
+          <span>🔌</span> API Testing <span class="cat-count">9</span>
+        </button>
+        <button class="cat-tab" data-target="devtools">
+          <span>🛠️</span> Dev Tools <span class="cat-count">6</span>
+        </button>
+        <button class="cat-tab" data-target="playwright">
+          <span>🎭</span> Playwright <span class="cat-count">10</span>
+        </button>
+        <button class="cat-tab" data-target="typescript">
+          <span>📘</span> TypeScript <span class="cat-count">13</span>
+        </button>
+        <button class="cat-tab" data-target="genai">
+          <span>🤖</span> Gen AI for QA <span class="cat-count">12</span>
+        </button>
+        <button class="cat-tab" data-target="copilot">
+          <span>🪟</span> MS Copilot <span class="cat-count">8</span>
+        </button>
+        <button class="cat-tab" data-target="claude">
+          <span>✦</span> Claude AI <span class="cat-count">16</span>
+        </button>
+        <button class="cat-tab" data-target="mcp">
+          <span>🔗</span> MCP <span class="cat-count">2</span>
+        </button>
+      </div>
+
+      <!-- ── MANUAL TESTING ── -->
+      <div class="tutorial-group active" id="manual">
+        <div class="tutorial-intro">
+          <h3>START HERE — THE FOUNDATION OF ALL TESTING</h3>
+          <p>
+            Before a new car reaches the showroom, a trained person sits inside it, drives it,
+            presses every button, checks every light, and confirms everything works as expected.
+            No machine replaces this step completely.
+          </p>
+          <p>
+            Manual testing is exactly that — a trained tester uses the software by hand, just like a real user
+            would, and checks that everything works correctly. All automation comes after you first understand
+            manual testing well.
+          </p>
+        </div>
+        <div class="accordion">
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">1</span>
+              <span class="acc-title">What is Manual Testing?</span>
+              <span class="acc-tag tag-foundation">Foundation</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>Manual testing is the process of manually executing test cases without automation tools. A tester plays the role of an end user and tests the software to identify any bugs or defects.</p>
+              <ul>
+                <li>Tester manually verifies all features</li>
+                <li>No scripts or tools required initially</li>
+                <li>Forms the basis of all QA work</li>
+                <li>Helps understand the real application behavior</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">2</span>
+              <span class="acc-title">Types of Manual Testing — Explained in Detail</span>
+              <span class="acc-tag tag-core">Core Concepts</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li><strong>Smoke Testing:</strong> Quick check to verify basic functionality works</li>
+                <li><strong>Regression Testing:</strong> Ensure new changes don't break existing features</li>
+                <li><strong>Exploratory Testing:</strong> Ad-hoc testing based on tester intuition and experience</li>
+                <li><strong>Acceptance Testing:</strong> Validate the system meets business requirements</li>
+                <li><strong>Usability Testing:</strong> Check if the application is user-friendly</li>
+                <li><strong>Sanity Testing:</strong> Verify specific functionality after a bug fix</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">3</span>
+              <span class="acc-title">How to Write a Test Case</span>
+              <span class="acc-tag tag-mustknow">Must Know</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>A test case is a set of conditions or steps used to determine whether a feature works correctly.</p>
+              <ul>
+                <li><strong>Test Case ID:</strong> Unique identifier for tracking</li>
+                <li><strong>Title:</strong> Brief description of what is tested</li>
+                <li><strong>Preconditions:</strong> What must be true before the test</li>
+                <li><strong>Test Steps:</strong> Step-by-step instructions</li>
+                <li><strong>Expected Result:</strong> What should happen</li>
+                <li><strong>Actual Result:</strong> What actually happened</li>
+                <li><strong>Status:</strong> Pass / Fail</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">4</span>
+              <span class="acc-title">How to Write a Bug Report</span>
+              <span class="acc-tag tag-mustknow">Must Know</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>A good bug report helps developers understand, reproduce, and fix defects quickly.</p>
+              <ul>
+                <li><strong>Bug ID:</strong> Unique identifier</li>
+                <li><strong>Summary:</strong> Brief one-line description</li>
+                <li><strong>Severity:</strong> Critical, Major, Minor, Trivial</li>
+                <li><strong>Priority:</strong> High, Medium, Low</li>
+                <li><strong>Steps to Reproduce:</strong> Exact steps to see the bug</li>
+                <li><strong>Expected vs Actual Result:</strong> Clear comparison</li>
+                <li><strong>Screenshots / Logs:</strong> Supporting evidence</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">5</span>
+              <span class="acc-title">Test Life Cycle (STLC) — How Testing Works in a Project</span>
+              <span class="acc-tag tag-process">Process</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>The Software Testing Life Cycle (STLC) defines the ordered steps involved in testing a software application.</p>
+              <ol>
+                <li><strong>Requirement Analysis:</strong> Review what needs to be tested</li>
+                <li><strong>Test Planning:</strong> Create test strategy, schedule, and resources</li>
+                <li><strong>Test Case Design:</strong> Write test cases and test data</li>
+                <li><strong>Test Environment Setup:</strong> Prepare the environment</li>
+                <li><strong>Test Execution:</strong> Run tests and log results</li>
+                <li><strong>Test Closure:</strong> Summarize results and lessons learned</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">6</span>
+              <span class="acc-title">Entry and Exit Criteria — When Testing Starts and Ends</span>
+              <span class="acc-tag tag-process">Process</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li><strong>Entry Criteria:</strong> Requirements finalized, test environment ready, test cases reviewed and approved</li>
+                <li><strong>Exit Criteria:</strong> All planned tests executed, critical bugs fixed, test coverage met, sign-off received</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">7</span>
+              <span class="acc-title">7 Principles of Software Testing</span>
+              <span class="acc-tag tag-foundation">Foundation</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ol>
+                <li>Testing shows the <strong>presence</strong> of defects, not their absence</li>
+                <li><strong>Exhaustive testing</strong> is impossible</li>
+                <li><strong>Early testing</strong> saves time and money</li>
+                <li>Defects <strong>cluster together</strong> (Pareto principle — 80/20 rule)</li>
+                <li>Beware of the <strong>pesticide paradox</strong> — vary your tests</li>
+                <li>Testing is <strong>context dependent</strong></li>
+                <li><strong>Absence-of-errors fallacy</strong> — passing all tests ≠ good software</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">8</span>
+              <span class="acc-title">Agile Model — How Testing Works in Agile Projects</span>
+              <span class="acc-tag tag-agile">Agile</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>In Agile, testing is continuous and happens within each sprint cycle alongside development.</p>
+              <ul>
+                <li>Testing starts from Day 1 of the sprint</li>
+                <li>QA collaborates closely with developers and PO</li>
+                <li>Stories have clear acceptance criteria</li>
+                <li>Regression testing performed each sprint</li>
+                <li>Continuous feedback loop between dev and QA</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">9</span>
+              <span class="acc-title">Manual vs Automation Testing — When to Use Which</span>
+              <span class="acc-tag tag-decision">Key Decision</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li><strong>Use Manual When:</strong> Exploratory testing, UI/UX review, short-term projects, one-time tests, usability checks</li>
+                <li><strong>Use Automation When:</strong> Regression suite, repetitive tests, performance testing, large-scale test execution, CI/CD pipelines</li>
+              </ul>
+              <p>Start manual. Automate what is repetitive and stable.</p>
+            </div>
+          </div>
+
+        </div><!-- /accordion -->
+      </div><!-- /manual -->
+
+      <!-- ── API TESTING ── -->
+      <div class="tutorial-group" id="api">
+        <div class="tutorial-intro">
+          <h3>API TESTING — TESTING BEHIND THE SCENES</h3>
+          <p>API testing validates the communication between different software systems — making sure data is correctly sent and received behind the scenes, independent of the user interface.</p>
+        </div>
+        <div class="accordion">
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">1</span>
+              <span class="acc-title">What is an API?</span>
+              <span class="acc-tag tag-foundation">Foundation</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>API (Application Programming Interface) is a contract that allows two applications to communicate. It defines the rules for how requests and responses are structured.</p>
+              <ul>
+                <li>Client sends a request to the server</li>
+                <li>Server processes and sends back a response</li>
+                <li>REST APIs use HTTP: GET, POST, PUT, DELETE</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">2</span>
+              <span class="acc-title">HTTP Methods — GET, POST, PUT, DELETE</span>
+              <span class="acc-tag tag-core">Core Concepts</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li><strong>GET:</strong> Retrieve data (read only, no body)</li>
+                <li><strong>POST:</strong> Create new data on server</li>
+                <li><strong>PUT:</strong> Full update of existing data</li>
+                <li><strong>PATCH:</strong> Partial update of existing data</li>
+                <li><strong>DELETE:</strong> Remove data from server</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">3</span>
+              <span class="acc-title">HTTP Status Codes Explained</span>
+              <span class="acc-tag tag-mustknow">Must Know</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li><strong>2xx Success:</strong> 200 OK, 201 Created, 204 No Content</li>
+                <li><strong>3xx Redirect:</strong> 301 Moved Permanently, 304 Not Modified</li>
+                <li><strong>4xx Client Error:</strong> 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 422 Unprocessable</li>
+                <li><strong>5xx Server Error:</strong> 500 Internal Server Error, 503 Service Unavailable</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">4</span>
+              <span class="acc-title">Testing APIs with Postman</span>
+              <span class="acc-tag tag-tool">Tool</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>Postman is the most popular GUI tool for API testing.</p>
+              <ul>
+                <li>Build requests with URL, method, headers, and body</li>
+                <li>Write tests using JavaScript in the Tests tab</li>
+                <li>Organize requests into Collections</li>
+                <li>Use Environment Variables for different environments</li>
+                <li>Run collections with Newman (CLI)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">5</span>
+              <span class="acc-title">Writing API Test Cases</span>
+              <span class="acc-tag tag-mustknow">Must Know</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>Verify correct status code for valid requests</li>
+                <li>Validate response body structure and data types</li>
+                <li>Test with invalid / missing data (400 errors)</li>
+                <li>Test authentication (401, 403)</li>
+                <li>Test boundary values and null inputs</li>
+                <li>Verify response time is within acceptable limits</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">6</span>
+              <span class="acc-title">Authentication in APIs</span>
+              <span class="acc-tag tag-core">Core Concepts</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li><strong>API Key:</strong> Simple token in headers or query params</li>
+                <li><strong>Bearer Token / JWT:</strong> Most common in modern APIs</li>
+                <li><strong>OAuth 2.0:</strong> For third-party authorization flows</li>
+                <li><strong>Basic Auth:</strong> Base64-encoded username:password</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">7</span>
+              <span class="acc-title">JSON Response Validation</span>
+              <span class="acc-tag tag-core">Core Concepts</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>Most modern APIs return JSON. Key things to validate:</p>
+              <ul>
+                <li>Correct data types (string, number, boolean, array)</li>
+                <li>Required fields are present</li>
+                <li>No extra unexpected fields</li>
+                <li>Correct nested structure and array lengths</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">8</span>
+              <span class="acc-title">API Performance Testing Basics</span>
+              <span class="acc-tag tag-advanced">Advanced</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>Measure response time under normal load</li>
+                <li>Stress test with concurrent virtual users</li>
+                <li>Tools: JMeter, k6, Gatling, Artillery</li>
+                <li>Define SLA thresholds (e.g., &lt;500ms for 95% of requests)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">9</span>
+              <span class="acc-title">API Testing Best Practices</span>
+              <span class="acc-tag tag-decision">Best Practices</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>Test APIs independently from the UI layer</li>
+                <li>Use environment variables for base URLs and tokens</li>
+                <li>Automate with Newman or CI/CD pipelines</li>
+                <li>Include negative and edge case tests</li>
+                <li>Validate response schema with tools like Pact or AJV</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /api -->
+
+      <!-- ── DEV TOOLS ── -->
+      <div class="tutorial-group" id="devtools">
+        <div class="tutorial-intro">
+          <h3>DEV TOOLS — TESTING IN THE BROWSER</h3>
+          <p>Browser DevTools are a powerful set of debugging tools built directly into every modern browser. Every QA tester should master DevTools to inspect elements, monitor network requests, and debug issues.</p>
+        </div>
+        <div class="accordion">
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">1</span>
+              <span class="acc-title">Introduction to Browser DevTools</span>
+              <span class="acc-tag tag-foundation">Foundation</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>DevTools are built into Chrome, Firefox, and Edge. Open with <kbd>F12</kbd> or <kbd>Ctrl+Shift+I</kbd>.</p>
+              <ul>
+                <li><strong>Elements:</strong> Inspect and modify HTML/CSS live</li>
+                <li><strong>Console:</strong> View JavaScript errors and run commands</li>
+                <li><strong>Network:</strong> Monitor all HTTP requests and responses</li>
+                <li><strong>Sources:</strong> Debug JavaScript with breakpoints</li>
+                <li><strong>Application:</strong> Inspect cookies, localStorage, cache</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">2</span>
+              <span class="acc-title">Network Tab — Intercepting API Calls</span>
+              <span class="acc-tag tag-mustknow">Must Know</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>View all HTTP requests made by the page</li>
+                <li>Inspect request headers, payload, and response body</li>
+                <li>Filter by XHR/Fetch for API calls only</li>
+                <li>Check status codes and response times</li>
+                <li>Copy as cURL to replay directly in Postman</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">3</span>
+              <span class="acc-title">Console Tab — Finding JavaScript Errors</span>
+              <span class="acc-tag tag-mustknow">Must Know</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>Errors appear in red — always check them first</li>
+                <li>Warnings appear in yellow — often important hints</li>
+                <li>Run JavaScript commands interactively</li>
+                <li>Filter by level: Error, Warning, Info, Log</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">4</span>
+              <span class="acc-title">Elements Tab — Inspecting the DOM</span>
+              <span class="acc-tag tag-core">Core Concepts</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>Right-click any element → Inspect to jump to it</li>
+                <li>View and edit HTML structure in real-time</li>
+                <li>Modify CSS styles on the fly for visual testing</li>
+                <li>Find CSS selectors and data-testid attributes for automation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">5</span>
+              <span class="acc-title">Application Tab — Cookies and Storage</span>
+              <span class="acc-tag tag-core">Core Concepts</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>View, add, edit, and delete cookies</li>
+                <li>Inspect localStorage and sessionStorage values</li>
+                <li>Test authentication scenarios by modifying tokens</li>
+                <li>Clear all storage to simulate a fresh user session</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">6</span>
+              <span class="acc-title">Responsive Design Testing</span>
+              <span class="acc-tag tag-core">Core Concepts</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>Toggle Device Toolbar with <kbd>Ctrl+Shift+M</kbd></li>
+                <li>Test on various preset screen sizes (iPhone, iPad, etc.)</li>
+                <li>Simulate mobile touch events</li>
+                <li>Throttle network speed to simulate slow connections</li>
+                <li>Test in portrait and landscape orientations</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /devtools -->
+
+      <!-- ── PLAYWRIGHT ── -->
+      <div class="tutorial-group" id="playwright">
+        <div class="tutorial-intro">
+          <h3>PLAYWRIGHT — BROWSER AUTOMATION</h3>
+          <p>Playwright is a powerful automation framework by Microsoft for end-to-end testing. It controls Chromium, Firefox, and WebKit — all with a single API. Auto-waits by default, making tests far less flaky.</p>
+        </div>
+        <div class="accordion">
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">1</span>
+              <span class="acc-title">What is Playwright?</span>
+              <span class="acc-tag tag-foundation">Foundation</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>Developed by Microsoft — open source</li>
+                <li>Supports Chromium, Firefox, and WebKit</li>
+                <li>Works with TypeScript, JavaScript, Python, Java, C#</li>
+                <li>Auto-waits for elements to be ready (no more sleep!)</li>
+                <li>Built-in test runner: <code>@playwright/test</code></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">2</span>
+              <span class="acc-title">Setting Up Playwright</span>
+              <span class="acc-tag tag-setup">Setup</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <pre><code>npm init playwright@latest
+npx playwright install
+npx playwright test</code></pre>
+              <p>The wizard creates project structure with config, example tests, and browser binaries.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">3</span>
+              <span class="acc-title">Locators — Finding Elements</span>
+              <span class="acc-tag tag-core">Core Concepts</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <pre><code>page.getByRole('button', { name: 'Submit' })
+page.getByText('Welcome, Arun')
+page.getByLabel('Username')
+page.getByPlaceholder('Enter email')
+page.getByTestId('submit-button')
+page.locator('#login-btn')</code></pre>
+              <p>Prefer role and label locators — they are resilient and accessible.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">4</span>
+              <span class="acc-title">Actions — Click, Fill, Navigate</span>
+              <span class="acc-tag tag-core">Core Concepts</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <pre><code>await page.goto('https://example.com');
+await page.getByLabel('Username').fill('admin');
+await page.getByLabel('Password').fill('secret');
+await page.getByRole('button', { name: 'Login' }).click();
+await page.waitForURL('**/dashboard');</code></pre>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">5</span>
+              <span class="acc-title">Assertions in Playwright</span>
+              <span class="acc-tag tag-mustknow">Must Know</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <pre><code>await expect(page).toHaveTitle('Dashboard');
+await expect(page.getByText('Welcome')).toBeVisible();
+await expect(page.getByRole('button')).toBeEnabled();
+await expect(page.getByTestId('alert')).toHaveText('Success!');
+await expect(page).toHaveURL(/dashboard/);</code></pre>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">6</span>
+              <span class="acc-title">Page Object Model (POM)</span>
+              <span class="acc-tag tag-pattern">Pattern</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>POM creates a class per page, separating locators and actions from test logic:</p>
+              <pre><code>class LoginPage {
+  constructor(private page: Page) {}
+  usernameInput = this.page.getByLabel('Username');
+  async login(user: string, pass: string) {
+    await this.usernameInput.fill(user);
+    await this.page.getByLabel('Password').fill(pass);
+    await this.page.getByRole('button',{name:'Login'}).click();
+  }
+}</code></pre>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">7</span>
+              <span class="acc-title">Test Fixtures and Hooks</span>
+              <span class="acc-tag tag-core">Core Concepts</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <pre><code>test.beforeEach(async ({ page }) => {
+  await page.goto('https://example.com/login');
+});
+
+test.afterAll(async () => {
+  // cleanup after all tests in this file
+});</code></pre>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">8</span>
+              <span class="acc-title">API Testing with Playwright</span>
+              <span class="acc-tag tag-advanced">Advanced</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <pre><code>const response = await request.get('/api/users');
+expect(response.status()).toBe(200);
+const body = await response.json();
+expect(body.users).toHaveLength(10);</code></pre>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">9</span>
+              <span class="acc-title">Screenshots, Video and Traces</span>
+              <span class="acc-tag tag-advanced">Advanced</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>Configure in <code>playwright.config.ts</code>:</p>
+              <pre><code>use: {
+  screenshot: 'only-on-failure',
+  video: 'retain-on-failure',
+  trace: 'on-first-retry'
+}</code></pre>
+              <p>View traces: <code>npx playwright show-trace trace.zip</code></p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">10</span>
+              <span class="acc-title">Running Tests in CI/CD</span>
+              <span class="acc-tag tag-advanced">Advanced</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>Tests run headless by default in CI environments</li>
+                <li>Integrate with GitHub Actions, Azure DevOps, Jenkins</li>
+                <li>Generate HTML reports: <code>npx playwright show-report</code></li>
+                <li>Retry flaky tests with <code>retries: 2</code> in config</li>
+                <li>Parallel execution across workers for speed</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /playwright -->
+
+      <!-- ── TYPESCRIPT ── -->
+      <div class="tutorial-group" id="typescript">
+        <div class="tutorial-intro">
+          <h3>TYPESCRIPT FOR QA TESTERS</h3>
+          <p>TypeScript adds static typing to JavaScript, making your test code more reliable, easier to understand, and less prone to runtime errors. It is Playwright's native and recommended language.</p>
+        </div>
+        <div class="accordion">
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">1</span>
+              <span class="acc-title">Why TypeScript for Test Automation?</span>
+              <span class="acc-tag tag-foundation">Foundation</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>Catch errors at compile time, not at runtime</li>
+                <li>Better IntelliSense and autocomplete in VS Code</li>
+                <li>Self-documenting code — types explain what parameters mean</li>
+                <li>Easier refactoring across large codebases</li>
+                <li>Native language for Playwright</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">2</span>
+              <span class="acc-title">Basic Types</span>
+              <span class="acc-tag tag-core">Core Concepts</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <pre><code>const name: string = 'Arun';
+const age: number = 30;
+const isActive: boolean = true;
+const scores: number[] = [95, 87, 92];
+const status: 'pass' | 'fail' = 'pass';
+let data: string | null = null;</code></pre>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">3</span>
+              <span class="acc-title">Interfaces and Type Aliases</span>
+              <span class="acc-tag tag-core">Core Concepts</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <pre><code>interface User {
+  id: number;
+  name: string;
+  email: string;
+  role?: string; // optional field
+}
+
+type TestStatus = 'pass' | 'fail' | 'skip';</code></pre>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">4</span>
+              <span class="acc-title">Functions with Types</span>
+              <span class="acc-tag tag-core">Core Concepts</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <pre><code>function login(username: string, password: string): boolean {
+  return username === 'admin' && password === 'secret';
+}
+
+const fetchUser = async (id: number): Promise&lt;User&gt; => {
+  return await api.get(`/users/${id}`);
+};</code></pre>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">5</span>
+              <span class="acc-title">Classes for Page Objects</span>
+              <span class="acc-tag tag-core">Core Concepts</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <pre><code>class LoginPage {
+  readonly page: Page;
+  readonly username: Locator;
+  readonly password: Locator;
+
+  constructor(page: Page) {
+    this.page = page;
+    this.username = page.getByLabel('Username');
+    this.password = page.getByLabel('Password');
+  }
+  async login(u: string, p: string): Promise&lt;void&gt; {
+    await this.username.fill(u);
+    await this.password.fill(p);
+    await this.page.getByRole('button',{name:'Login'}).click();
+  }
+}</code></pre>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">6</span>
+              <span class="acc-title">Generics</span>
+              <span class="acc-tag tag-advanced">Advanced</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <pre><code>function getFirst&lt;T&gt;(arr: T[]): T {
+  return arr[0];
+}
+// TypeScript infers T = number:
+const first = getFirst([1, 2, 3]); // type: number</code></pre>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /typescript -->
+
+      <!-- ── GEN AI FOR QA ── -->
+      <div class="tutorial-group" id="genai">
+        <div class="tutorial-intro">
+          <h3>GEN AI FOR QA — SMARTER TESTING WITH AI</h3>
+          <p>AI tools like Claude and ChatGPT can help write test cases, find errors faster, and create reports — saving hours of manual work. Like having a very studious colleague who helps prepare in seconds!</p>
+        </div>
+        <div class="accordion">
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">1</span>
+              <span class="acc-title">How AI Assists QA Testers</span>
+              <span class="acc-tag tag-foundation">Foundation</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>Generate test cases from requirements in seconds</li>
+                <li>Write Playwright / Postman scripts faster</li>
+                <li>Explain errors and suggest fixes</li>
+                <li>Create diverse test data and edge cases</li>
+                <li>Review and improve bug reports</li>
+                <li>Summarize test run results</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">2</span>
+              <span class="acc-title">Prompt Engineering for QA</span>
+              <span class="acc-tag tag-core">Core Concepts</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>Good prompts get better results. For QA tasks, be specific about:</p>
+              <ul>
+                <li>The feature being tested (context)</li>
+                <li>The format you want (table, numbered list, code)</li>
+                <li>The technology stack (Playwright, Postman, etc.)</li>
+                <li>Both positive and negative test scenarios</li>
+                <li>Example: <em>"Generate 10 test cases for a login page including positive, negative, and boundary cases. Return as a markdown table."</em></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">3</span>
+              <span class="acc-title">Using ChatGPT to Write Test Cases</span>
+              <span class="acc-tag tag-tool">Tool</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>Example prompt:<br><em>"Write test cases for a login form with username and password. Include positive, negative, and boundary tests. Format as a table with columns: ID, Title, Steps, Expected Result."</em></p>
+              <p>ChatGPT will generate a comprehensive test suite in seconds.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">4</span>
+              <span class="acc-title">Using Claude AI for QA Tasks</span>
+              <span class="acc-tag tag-tool">Tool</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>Claude excels at understanding long context and generating detailed QA artifacts:</p>
+              <ul>
+                <li>Analyzing requirements documents for testability</li>
+                <li>Writing detailed, well-structured bug reports</li>
+                <li>Generating complete Playwright test scripts</li>
+                <li>Reviewing existing test coverage and suggesting gaps</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">5</span>
+              <span class="acc-title">GitHub Copilot Inside VS Code</span>
+              <span class="acc-tag tag-tool">Tool</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>Install GitHub Copilot extension in VS Code</li>
+                <li>Inline code suggestions as you type test scripts</li>
+                <li>Chat with Copilot about your test code</li>
+                <li>Auto-complete Page Object methods and assertions</li>
+                <li>Generate entire test files from a comment description</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /genai -->
+
+      <!-- ── MS COPILOT ── -->
+      <div class="tutorial-group" id="copilot">
+        <div class="tutorial-intro">
+          <h3>MICROSOFT COPILOT FOR QA</h3>
+          <p>Microsoft Copilot integrates AI across Microsoft 365 and VS Code — boosting QA productivity in documentation, test scripting, and communication.</p>
+        </div>
+        <div class="accordion">
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">1</span>
+              <span class="acc-title">What is Microsoft Copilot?</span>
+              <span class="acc-tag tag-foundation">Foundation</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>Microsoft Copilot is AI assistance integrated across Microsoft products — Teams, Word, Excel, Outlook, and VS Code.</p>
+              <ul>
+                <li>Powered by large language models and Microsoft's infrastructure</li>
+                <li>Context-aware within your apps and documents</li>
+                <li>GitHub Copilot specifically for coding tasks in VS Code</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">2</span>
+              <span class="acc-title">GitHub Copilot in VS Code</span>
+              <span class="acc-tag tag-tool">Tool</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>Install the GitHub Copilot extension from VS Code marketplace</li>
+                <li>Get inline code suggestions as you type</li>
+                <li>Open Copilot Chat panel for QA questions</li>
+                <li>Generate complete test files from comment descriptions</li>
+                <li>Ask "Explain this test" or "Fix this assertion"</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">3</span>
+              <span class="acc-title">Copilot in Microsoft Teams for QA Communication</span>
+              <span class="acc-tag tag-tool">Tool</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>Summarize long bug discussion threads instantly</li>
+                <li>Draft QA status update messages</li>
+                <li>Create meeting notes from testing sessions</li>
+                <li>Generate action items from test review meetings</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /copilot -->
+
+      <!-- ── CLAUDE AI ── -->
+      <div class="tutorial-group" id="claude">
+        <div class="tutorial-intro">
+          <h3>CLAUDE AI — DEEP QA ASSISTANCE</h3>
+          <p>Claude is an AI assistant by Anthropic, known for detailed, nuanced, and context-aware responses — making it excellent for QA documentation, test strategy, and code review.</p>
+        </div>
+        <div class="accordion">
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">1</span>
+              <span class="acc-title">Introduction to Claude for QA</span>
+              <span class="acc-tag tag-foundation">Foundation</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>Claude (claude.ai) is developed by Anthropic with a focus on being helpful, harmless, and honest. It handles very long documents well.</p>
+              <ul>
+                <li>Analyze long requirement or specification documents</li>
+                <li>Generate comprehensive test plans</li>
+                <li>Review and critique existing test strategies</li>
+                <li>Write detailed test reports and summaries</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">2</span>
+              <span class="acc-title">Writing Test Plans with Claude</span>
+              <span class="acc-tag tag-tool">Tool</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>Share your requirements document with Claude and ask it to create a comprehensive test plan including scope, approach, test scenarios, risks, and exit criteria.</p>
+              <p>Claude can process the full document and produce a structured, professional test plan in seconds.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">3</span>
+              <span class="acc-title">Generating Playwright Scripts with Claude</span>
+              <span class="acc-tag tag-advanced">Advanced</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>Paste your HTML or describe the UI, then ask Claude to write a Playwright test. Claude understands Playwright's API deeply and writes realistic, working test scripts.</p>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /claude -->
+
+      <!-- ── MCP ── -->
+      <div class="tutorial-group" id="mcp">
+        <div class="tutorial-intro">
+          <h3>MCP — MODEL CONTEXT PROTOCOL</h3>
+          <p>Model Context Protocol (MCP) is an open standard that enables AI models to connect with external tools and data sources — extending AI capabilities for QA automation workflows.</p>
+        </div>
+        <div class="accordion">
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">1</span>
+              <span class="acc-title">What is MCP?</span>
+              <span class="acc-tag tag-foundation">Foundation</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p>MCP (Model Context Protocol) is an open standard developed by Anthropic for connecting AI assistants to external tools, databases, and APIs in a standardized way.</p>
+              <ul>
+                <li>Allows AI to interact with real systems (browsers, databases, APIs)</li>
+                <li>Standardized protocol — works across different AI models</li>
+                <li>Used in Claude, VS Code Copilot, and other AI tools</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="acc-num">2</span>
+              <span class="acc-title">MCP for QA Automation</span>
+              <span class="acc-tag tag-advanced">Advanced</span>
+              <span class="acc-arrow">▾</span>
+            </button>
+            <div class="accordion-content">
+              <ul>
+                <li>Connect AI directly to your test management tools (Jira, TestRail)</li>
+                <li>Automate test case creation from requirement tickets</li>
+                <li>Link AI to CI/CD pipelines for intelligent failure analysis</li>
+                <li>Real-time defect tracking with AI assistance</li>
+                <li>Browser automation via Playwright MCP server</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /mcp -->
+
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-label">👋 ABOUT</div>
+      <div class="about-card">
+        <div class="about-avatar">AS</div>
+        <div class="about-info">
+          <h2 class="about-name">Arun Shanmugam</h2>
+          <p class="about-role">QA Tester &middot; Playwright &middot; TypeScript &middot; API Testing &middot; Gen AI</p>
+          <p class="about-desc">
+            Passionate about quality assurance and making testing simple to understand.
+            I believe every tester should start with strong manual testing fundamentals
+            before diving into automation.
+          </p>
+          <p class="about-desc">
+            This site is my effort to share what I've learned — explained simply, with real
+            examples and plain language. Whether you're just starting out or brushing up on
+            modern tools, there's something here for you.
+          </p>
+          <a href="mailto:arun.shanmugam@example.com" class="btn btn-outline">📧 Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-label">🛠 SKILLS</div>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-icon">🎭</div>
+          <h3>Playwright</h3>
+          <p>Controls a website automatically — clicks buttons, fills forms, and checks results without human involvement.</p>
+          <div class="skill-tip">💡 Like a helpful robot that uses an app all day and reports if anything goes wrong!</div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🔌</div>
+          <h3>API Testing</h3>
+          <p>Testing communication between software systems — ensuring data is correctly sent and received behind the scenes.</p>
+          <div class="skill-tip">💡 Like calling the backend directly to verify data before the UI even loads!</div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🤖</div>
+          <h3>AI-Assisted Testing</h3>
+          <p>Using Claude, ChatGPT, and GitHub Copilot to write test cases, generate scripts, and create reports faster.</p>
+          <div class="skill-tip">💡 Like a studious colleague who prepares all your questions before an exam — in seconds!</div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">📋</div>
+          <h3>Bug Reporting</h3>
+          <p>Writing clear, detailed reports when something doesn't work — with exact steps, evidence, and expected behaviour.</p>
+          <div class="skill-tip">💡 Like writing a precise complaint letter with all the evidence, so the issue gets fixed fast!</div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">📘</div>
+          <h3>TypeScript</h3>
+          <p>A strongly typed language built on JavaScript — making automation code safer, more readable, and maintainable.</p>
+          <div class="skill-tip">💡 JavaScript with a safety net — catches mistakes before they become runtime bugs!</div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🛠️</div>
+          <h3>Browser DevTools</h3>
+          <p>Inspecting elements, monitoring network requests, debugging JavaScript, and testing responsive designs in the browser.</p>
+          <div class="skill-tip">💡 X-ray vision into how a website truly works under the hood!</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-label">✉️ REACH OUT</div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">📧</div>
+          <h3>Email Me</h3>
+          <a href="mailto:arun.shanmugam@example.com" class="email-link">arun.shanmugam@example.com</a>
+          <p>Get in touch — questions, feedback, or just a hello!</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🎓</div>
+          <h3>Tutorials Open to All</h3>
+          <p>All content on this site is free and open to everyone. Share with anyone curious about QA testing.</p>
+          <a href="mailto:arun.shanmugam@example.com" class="btn btn-primary">📧 Write to Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-avatar">AS</div>
+          <div>
+            <div class="footer-name">Arun Shanmugam</div>
+            <div class="footer-role">QA Tester &middot; Playwright &middot; TypeScript &middot; API Testing &middot; Gen AI</div>
+            <a href="mailto:arun.shanmugam@example.com" class="footer-email">📧 arun.shanmugam@example.com</a>
+            <div class="footer-tagline">Making testing simple to understand.</div>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <a href="#tutorials">Tutorials</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Arun Shanmugam &middot; QA Tester Notes</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
